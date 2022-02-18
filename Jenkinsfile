@@ -16,11 +16,6 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {
-             steps {
-                 gradlew('quarkusDev')
-             }
-         }
     }
 }
 def gradlew(String... args) {
