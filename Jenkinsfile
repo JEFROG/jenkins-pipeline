@@ -16,6 +16,11 @@ pipeline {
                 }
             }
         }
+        stage('Deploy') {
+             steps {
+                 java -jar build/quarkus-app/quarkus-run.jar
+             }
+         }
     }
 }
 def gradlew(String... args) {
