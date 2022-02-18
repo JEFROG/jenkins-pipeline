@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
              steps {
-                 java -jar 'build/quarkus-app/quarkus-run.jar'
+                 gradlew('quarkusDev')
              }
          }
     }
